@@ -50,7 +50,10 @@ ensure_dirs(build_target)
 
 # download the webpage files
 with open(html_base, "w") as html:
-    html.write(urllib2.urlopen(html_src).read())
+    raw = urllib2.urlopen(html_src).read().format(
+        repo_name=os.environ['CI_PROJECT_NAME'],
+    )
+    html.write()
 with open(build_target + "/index.css", "w") as css:
     css.write(urllib2.urlopen(css_src).read())
 with open(build_target + "/markdown.js", "w") as js:
