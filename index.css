@@ -1,0 +1,22 @@
+#nav{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    left: 0;
+    background-color: darkgrey;
+
+    padding-top:1em;
+    padding-left: 1em;
+
+    z-index: 1;
+}
+
+#root{
+    position: relative;
+    background-color: white;
+    margin-left: 100px;
+    padding-left: 1em;
+    padding-top: 5px;
+    margin-top: 5px;
+}
