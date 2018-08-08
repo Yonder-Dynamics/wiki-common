@@ -1,5 +1,5 @@
 var client = new XMLHttpRequest();
-client.open('GET', 'content.md');
+client.open('GET', 'wiki.md');
 client.onreadystatechange = function() {
     var text      = client.responseText;
     var converter = new showdown.Converter();
