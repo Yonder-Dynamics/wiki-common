@@ -14,9 +14,17 @@
 
 #root{
     position: relative;
+    height: 100%;
+    overflow: scroll;
     background-color: white;
-    margin-left: 100px;
+    margin-left: 110px;
     padding-left: 1em;
     padding-top: 5px;
     margin-top: 5px;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
 }
