@@ -33,6 +33,7 @@ def traverse(path, src_name, tree=None):
 build_target = sys.argv[1]
 build_src = sys.argv[2].lower()
 html_base = build_target + "/html_base"
+page_url = os.environ['CI_PROJECT_URL'] + "/" + os.environ['CI_PROJECT_NAME']
 
 
 def build(tree, path, base):
@@ -41,7 +42,9 @@ def build(tree, path, base):
             ensure_dirs(base)
             subpath = path + "/" + tree[subdir]
             copyfile(html_base, base + "/" + "index.html")
-            copyfile(subpath, base + "/" + "wiki.md")
+            with open(subpath, "r") as src:
+                with open(base + "/" + "wiki.md", "w") as dst:
+                    dst.write(src.read().format(url=page_url))
         else:
             build(tree[subdir], path + "/" + subdir, base + "/" + subdir)
 
