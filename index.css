@@ -23,8 +23,8 @@ table {
     width: 100px;
     top: 0;
     left: 0;
-    background-color: darkgrey;
-
+    background: linear-gradient(to right, rgba(245,245,245,10), rgba(200,200,210,1));
+    border-right: 1px solid #303030;
     padding-top:1em;
     padding-left: 1em;
 
