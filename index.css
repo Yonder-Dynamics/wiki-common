@@ -9,6 +9,7 @@ td {
 }
 
 th {
+    text-align: left;
     height: 2rem;
 }
 table {
